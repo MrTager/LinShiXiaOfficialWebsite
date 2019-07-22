@@ -1,0 +1,141 @@
+#top{
+    width: auto;
+    height: 135.33px;
+    background-color: #ffd73a;
+    z-index: 10;
+}
+#topItem{
+    width: 1000px;
+    height: 135.33px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+#logo{
+    width: 200px;
+    height: 71.33px;
+    margin-top: 10px;
+    float: left;
+    background: url("../images/contact/logo.png") no-repeat;
+    background-size: 200px 71.33px;
+
+}
+#nav li a{
+    color: white;
+}
+#nav{
+    width: 500px;
+    float: right;
+    margin-top: 10px;
+    height: 21px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+#nav li{
+    float: left;
+    list-style: none;
+    color: white;
+    width: 100px;
+    text-align: right;
+}
+#topTxt{
+    width: 1000px;
+    height: 45px;
+    /*border: 1px solid black;*/
+    margin-top: 90.33px;
+    color: black;
+}
+#topItem h3{
+    line-height: 45px;
+    font-weight: bold;
+    font-family: 黑体;
+    font-size: 20px;
+}
+
+
+#toptwo{
+    width: 100%;
+    height: 245px;
+    background-image: url("../images/contact/bg2.jpg");
+    background-size: 100%;
+    position: relative;
+    margin-bottom: 60px;
+}
+#cover{
+    width: 100%;
+    height: 245px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);;
+    padding-top: 57px;
+}
+#upmain {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+}
+#upmain h1{
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+#upmain h2{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 13px;
+}
+#upmain div{
+    width: 30px;
+    height: 4px;
+    background-color: #8fcc94;
+    margin-bottom: 5px;
+}
+#upmain p{
+    margin-bottom: 5px;
+}
+
+
+#map{
+    height:500px;
+}
+#container{
+    width: 459px;
+    height: 206px;
+    border: 1px solid darkgray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+#contactInformation{
+    width: 440px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#contactInformation p{
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: black;
+}
+
+#footWhite{
+    height: 50px;
+    width: auto;
+    background-color: #ece9e9;
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    text-align: center;
+    font-size: 13px;
+    color: darkgray;
+    overflow: hidden;
+    border: 1px solid black;
+}
+#footer p{
+    margin-top: 50px;
+}

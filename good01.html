@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <link type="text/css" rel="styleSheet"  href="css/good01.css" />
+    <link type="text/css" rel="styleSheet"  href="css/clearDefaultStyle.css" />
+    <!--<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="./css/newCss.css">
+    <script src="http://libs.baidu.com/html5shiv/3.7/html5shiv.min.js"></script>
+</head>
+<body>
+<div id="bigBox">
+<div id="top">
+    <div id="topItem">
+        <div id="logo"></div>
+        <div id="nav">
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./market.html">产品贩售</a></li>
+                <li><a href="./company.html">公司动态</a></li>
+                <li><a href="./about.html">关于我们</a></li>
+                <li><a href="./contact.html">联系我们</a></li>
+            </ul>
+        </div>
+        <h3 id="topTxt">一刻钟 • 带你的味蕾环游世界</h3>
+    </div>
+</div>
+<div id="center">
+    <p id="titleTxt">零食侠 带你的味蕾环游世界</p>
+    <div id="topCenter">
+        <div id="buyactive">
+            <p id="title">逛吃逛吃礼包</p>
+            <!--<div id="btnSubtract " style="width: 20px;height: 20px;background-color: #8c9090">-</div>-->
+            <div id="buy">
+                <p>￥<span id="pace" style="color:#ffa500 ">288</span></p>
+                <!--<div id="quantity">
+
+                </div>-->
+                <div id="btnSubtract">-</div>
+                <input id="number" type="text" style="text-align: center" value="1">
+                <div id="btnPlus">+</div>
+                <div id="btnBuy"><span>立即购买</span></div>
+            </div>
+        </div>
+        <div id="buyactiveRightImg">
+            <img src="./images/goods1/1.jpg" alt="">
+        </div>
+    </div>
+    <div id="loopCenter">
+    <h2>商品详情</h2>
+    <p>Goods details</p>
+        <div id="product">
+            <img src="./images/goods1/2.jpg" alt="">
+            <br>
+            <img src="./images/goods1/3.jpg" alt="">
+            <br>
+            <img src="./images/goods1/11.jpg" alt="">
+            <br>
+            <img src="./images/goods1/22.jpg" alt="">
+            <br>
+            <img src="./images/goods1/33.jpg" alt="">
+        </div>
+        <div id="productTwo">
+            <img src="./images/goods1/111.png" alt="">
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <p>Copyright © 2015-2016 成都零食侠科技有限公司。蜀ICP备 15027883号-1</p>
+</div>
+</div>
+<div id="clearAll"></div>
+<from id="from">
+    <p>确认订单</p>
+    <p>订单列表</p>
+    <hr>
+    <table border="1px solid black" cellpadding="1px" cellspacing="1px" width="500px" height="50px">
+        <thead align="center">
+        <tr>
+            <th>名称</th>
+            <th>数量</th>
+            <th>单价</th>
+        </tr>
+        </thead>
+        <tbody align="center">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>包邮</p>
+    <p>￥<span id="place" class="place"></span></p>
+    <p>收货地址<span class="star">(*为必填项)</span></p>
+    <p>姓名:<span class="star">*</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="tname" type="text" placeholder="请输入姓名"><lable id="L1" class="lab"></lable></p>
+    <p>邮箱:<span class="star">*</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="temail" type="text" placeholder="请输入邮箱"><lable id="L2" class="lab"></lable></p>
+    <p>手机号:<span class="star">* </span>&nbsp&nbsp<input id="mphone" type="text" placeholder="请输入手机号"><lable id="L3" class="lab"></lable></p>
+    <p>地址:<span class="star">*</span>
+
+    <div class="form-inline">
+
+        <div data-toggle="distpicker">
+            <div class="form-group">
+                <label class="sr-only" for="province2">Province</label>
+                <select class="form-control" id="province2" data-province=""></select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="city2">City</label>
+                <select class="form-control" id="city2" data-city=""></select>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="district2">District</label>
+                <select class="form-control" id="district2" data-district=""></select>
+            </div>
+        </div>
+    <input id="address" type="text" placeholder="请输入详细地址"><lable id="L4" class="lab"></lable>
+    </div>
+
+
+    </p>
+    <p>邮编:<span class="star">*</span> &nbsp&nbsp&nbsp&nbsp&nbsp<input id="postNumber" type="text" placeholder="请输入邮编"><lable id="L5" class="lab"></lable></p>
+    <p>备注: </p>
+    <p id="textarea"><textarea style="width: 297px;height: 50px"  placeholder="请输入给商家留言"></textarea></p>
+
+    <button id="cancel">取消订单</button>
+    <button id="ok">确定订单</button>
+</from>
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#number").keydown(function (e) {
+            var code = parseInt(e.keyCode);
+            if (code >= 96 && code <= 105 || code >= 48 && code <= 57 || code == 8) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+
+        $("#number").bind("input propertychange", function () {
+            if (isNaN(parseFloat($(this).val())) || parseFloat($(this).val()) <= 0) $(this).val(1);
+        })
+
+
+        $('#btnSubtract').click(function () {
+            var number=$('#number').val();
+            if(number==1){
+                $('#number').val(number);
+            }else if(number>1){
+                number--;
+                $('#number').val(number);
+            }
+        })
+        $('#btnPlus').click(function () {
+            var number=$('#number').val();
+            number++
+            $('#number').val(number);
+        })
+
+
+
+
+
+        $('#addressOne option:eq(1)').click(function () {
+            $('#addressTwo').css({'display':'none'});
+            $('#bjAdd').css({'display':'block'});
+            $('#shAdd').css({'display':'none'});
+            $('#gzAdd').css({'display':'none'});
+            $('#szAdd').css({'display':'none'})
+        })
+
+
+
+        $('#ok').click(function () {
+            $('#L1').html('');
+            $('#L2').html('');
+            $('#L3').html('');
+            $('#L4').html('');
+            $('#L5').html('');
+            var flag=1;
+            if($("#tname").val()==''){
+                $('#L1').html('');
+                $('#L1').html('姓名输入不能为空！')
+                flag=2
+            }
+
+
+            if($("#tname").val()!=''){
+                var reg = /^([\u4E00-\u9FA5]+|[a-zA-Z]+)$/;
+                var r = $("#tname").val().match(reg);
+                if(r==null){
+                    $('#L1').html('');
+                    $('#L1').html('请输入正确的姓名！不能包含任何符号和数字');
+                    flag=2
+                }
+
+            }
+
+
+
+            if($("#postNumber").val()==''){
+                $('#L5').html('');
+                $('#L5').html('邮编输入不能为空！')
+                flag=2
+            }
+
+
+            if($("#postNumber").val()!=''){
+                var reg = /^[0-8][0-7]\d{4}$/;
+                var r = $("#postNumber").val().match(reg);
+                if(r==null){
+                    $('#L5').html('');
+                    $('#L5').html('请输入正确的邮编！');
+                    flag=2
+                }
+
+            }
+
+
+            if($("#temail").val()==''){
+                $('#L2').html('');
+                $('#L2').html('邮箱输入不能为空！')
+                flag=2
+            }
+
+            if($("#temail").val()!=''){
+                var reg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
+                var r = $("#temail").val().match(reg);
+                if(r==null){
+                    $('#L2').html('');
+                    $('#L2').html('请输入正确的邮箱');
+                    flag=2
+                }
+
+            }
+            if($("#mphone").val()==''){
+                $('#L3').html('');
+                $('#L3').html('手机号输入不能为空！')
+                flag=2
+            }
+            if($("#mphone").val()!=''){
+                var reg = /^((13[0-9])|(17[0-1,6-8])|(15[^4,\\D])|(18[0-9]))\d{8}$/;
+                var r = $("#mphone").val().match(reg);
+                if(r==null){
+                    $('#L3').html('');
+                    $('#L3').html('请输入正确的手机号');
+                    flag=2
+                }
+
+            }
+
+            if ($('#addressOne option:selected').text()=='--请选择省/城市--'){
+                alert('省市填写完整！')
+            }
+            if ($('#addressTwo option:selected').text()=='--请选择所在省份和地区--'){
+                alert('地区填写完整！')
+            }
+            if($("#address").val()==''){
+                $('#L4').html('');
+                $('#L4').html('详细地址输入不能为空！')
+                flag=2
+            }
+
+            if(flag==1){
+                alert('提交成功！')
+            }
+
+
+        });
+
+
+        $('#cancel').click(function () {
+            $('#from').css({'display':'none'});
+            $('#clearAll').css({'display':'none'})
+        })
+        $('#btnBuy').click(function () {
+
+            var val = $("#number").val();
+            var ival = parseInt(val);
+
+            console.log(typeof ival);
+            if(!isNaN($('#pace').html()*$('#number').val())){
+                $('#from').css({'display':'block'});
+                $('#clearAll').css({'display':'block'})
+
+                console.log($('#pace').html()*$('#number').val());
+
+                $('td:eq(0)').html($('#title').html());
+                $('td:eq(1)').html($('#number').val());
+                $('td:eq(2)').html($('#pace').html());
+                $('#place').html($('#pace').html()*$('#number').val());
+            } else{
+                alert('数量输入不合法！');
+            }
+
+        })
+    })
+</script>
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script src="js/distpicker.data.js"></script>
+<script src="js/distpicker.js"></script>
+<script src="js/main.js"></script>
+</html>
